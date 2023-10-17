@@ -4,12 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ApiSocialBooksApplication {
+public class SocialbooksApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ApiSocialBooksApplication.class, args);
+		SpringApplication.run(SocialbooksApplication.class, args);
 	}
 
 }
-
-
