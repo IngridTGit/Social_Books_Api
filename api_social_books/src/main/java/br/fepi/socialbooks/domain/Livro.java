@@ -3,10 +3,20 @@ package br.fepi.socialbooks.domain;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Transient;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
+@Entity 
 public class Livro {
+	
+	@Id 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@JsonInclude(Include.NON_NULL)
 	private Long id;
 	
@@ -26,6 +36,7 @@ public class Livro {
 	private String autor;
 	
 	@JsonInclude(Include.NON_NULL)
+	@Transient
 	private List<Comentario> comentarios;
 	
 	public Livro () {
